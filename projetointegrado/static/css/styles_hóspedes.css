@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(180, 233, 211);
+}
+.cabeçalho{
+    color: rgb(255, 255, 255);
+    font-size: 220%;
+    text-align: center;
+    
+}
+.Zuera{
+    color: rgb(243, 0, 170);
+    font-size: 450%;
+}
+h4{
+    cursor: pointer;
+}
+h1 {
+    text-align: center;
+    margin: 40px 0 40px;
+    text-align: center;
+    font-size: 50px;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Roboto, sans-serif;
+  }

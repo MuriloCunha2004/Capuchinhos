@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(180, 233, 211);
+}
+.cabeçalho{
+    color: rgb(255, 255, 255);
+    font-size: 220%;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Cherry Swash', cursive;
+}
+.info{
+    text-align:  center;
+    Font-family: Roboto, sans-serif;
+}
+.logo{
+    width: 200px;
+}
+h4{
+    cursor: pointer;
+}
+.contato{
+    Font-family: Roboto, sans-serif;
+}
