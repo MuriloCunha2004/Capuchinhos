@@ -1,8 +1,33 @@
 {% extends 'Inicial.html' %}
 {% load static %}
 <!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'css/styles_Inicial.css' %}"  />
 {% block content %}
     
+        
+        {% for item in object_list %}
+        
+        <ol>    
+        <li>{{item.nome }}</li>
+        <li>{{ item.cpf }}</li>
+        <li>{{ item.Data_De_Nascimento }}</li>
+        <li>{{ item.numero_telefone }}</li>
+        <li>{{ item.cidade }}</li>
+        <li>{{ item.cep }}</li>
+        <li>{{ item.Numero_da_Casa }}</li>
+        <li>{{ item.Contato_De_Emergência }}</li>
+        <li>{{ item.Observações }}</li>
+        </ol>
+        <form action='ver_hospedes/delete/{{item.id}}' method = "post">
+                <button type = "submit">Delete</button>
+        </form>
 
+
+        <hr color="black">
+        {% endfor %}
+
+        <div class="text-right">
+                <a href="/hospedes/" class="btn btn-outline-primary">Voltar</a>
+        </div>
    
-{% endblock content %}
+{% endblock content %} 

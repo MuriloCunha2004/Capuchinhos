@@ -17,6 +17,9 @@ class People(models.Model):
     Contato_De_Emergência = models.IntegerField(null=True, blank=True)
     Observações = models.CharField(max_length=225)
     
+    def __str__(self):
+        return self.nome
+    
 class Estoque(models.Model):
     codigo=models.IntegerField(null=True, blank=True)
     produto = models.CharField(max_length = 50)

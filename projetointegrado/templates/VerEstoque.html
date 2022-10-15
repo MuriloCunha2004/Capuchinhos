@@ -1,0 +1,28 @@
+{% extends 'Inicial.html' %}
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'css/styles_Inicial.css' %}"  />
+{% block content %}
+    
+        
+        {% for item in object_list %}
+        
+        <ol>    
+        <li>{{item.codigo }}</li>
+        <li>{{ item.produto }}</li>
+        <li>{{ item.quantidade }}</li>
+      
+        </ol>
+        <form action='ver_estoque/delete/{{item.id}}' method = "post">
+                <button type = "submit">Delete</button>
+        </form>
+
+
+        <hr color="black">
+        {% endfor %}
+
+        <div class="text-right">
+                <a href="/estoque/" class="btn btn-outline-primary">Voltar</a>
+        </div>
+   
+{% endblock content %} 

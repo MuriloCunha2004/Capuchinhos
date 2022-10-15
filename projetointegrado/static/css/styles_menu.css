@@ -1,3 +1,7 @@
+.titulo {
+  text-decoration: none!important;
+  background-color: red
+}
 nav {
     margin: 27px auto 0;
     top: 200px;
@@ -8,6 +12,7 @@ nav {
     border-radius: 8px;
     font-size: 0;
   }
+  
   nav a {
     line-height: 50px;
     height: 100%;
@@ -15,7 +20,7 @@ nav {
     display: inline-block;
     position: relative;
     z-index: 1;
-    text-decoration: none;
+    text-decoration: none!important;
     text-transform: uppercase;
     text-align: center;
     color: white;

@@ -19,7 +19,9 @@ from django.contrib import admin
 from django.urls import path , include
 from django.views.generic import TemplateView
 
-from nomedaapp.views import HospedesView, EstoqueView
+from nomedaapp.views import HospedesView, EstoqueView, EstoqueListView
+from nomedaapp.views import HospedesListView
+from nomedaapp.views import HospedeDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,8 +30,8 @@ urlpatterns = [
     path ('menu/',TemplateView.as_view(template_name='Menu.html')),
     path ('calendario/',TemplateView.as_view(template_name='Calendario.html')),
     path ('hospedes/',HospedesView.as_view(),),
-    path ('ver_hospedes/',TemplateView.as_view(template_name='VerHospedes.html')),
-    path ('estoque/', EstoqueView.as_view())
-
-    
+    path ('ver_hospedes/',HospedesListView.as_view()),
+    path ('estoque/', EstoqueView.as_view()),
+    path ('ver_hospedes/delete/<int:id>',HospedeDeleteView.as_view()),
+    path ('ver_estoque/',EstoqueListView.as_view()),
 ]
