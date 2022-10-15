@@ -1,31 +1,23 @@
+{% extends 'Inicial.html' %}
 {% load static %}
 <!DOCTYPE html>
-<html lang="pt-br">
-    <title>Centro de Convivencia Capuchinhos </title>
-    <meta charset =" utf -8" > </meta>
-</html>
-<head>
-    <link rel="stylesheet" href="{% static 'css/styles_hóspedes.css' %}"  />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body >
-    <header class="cabeçalho">
-        <h1>Centro de Convivencia Capuchinhos</h1>
-    </header>
-    <hr color="black"></hr>
+{% block content %}
+    
 
     <form method="post">
         {% csrf_token %}
         {% for field in form %}
-            {{field.label_tag}}
-            {{ field  }}
+            <div class="g-col-6">
+                    {{field.label_tag}}
+                    {{ field  }}
+
+            <br></br>
+            </div>
         {% endfor %}
         <div class="text-right">
             <a href="/menu/" class="btn btn-outline-primary">Voltar</a>
-            <button class="btn btn-primary">Enviar</button>
+            <button class="btn btn-primary" >Enviar</button>
         </div>
-        
+        <a href="/ver_hospedes/">Ver Hóspedes</a>
     </form>
-</body>
+{% endblock content %}

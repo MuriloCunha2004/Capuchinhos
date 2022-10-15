@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path , include
 from django.views.generic import TemplateView
 
-from nomedaapp.views import Hospedes
+from nomedaapp.views import HospedesView, EstoqueView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,9 +27,9 @@ urlpatterns = [
     path ('',TemplateView.as_view(template_name='registration/login.html')),
     path ('menu/',TemplateView.as_view(template_name='Menu.html')),
     path ('calendario/',TemplateView.as_view(template_name='Calendario.html')),
-    path ('hospedes/',Hospedes.as_view(),),
+    path ('hospedes/',HospedesView.as_view(),),
     path ('ver_hospedes/',TemplateView.as_view(template_name='VerHospedes.html')),
-    path ('estoque/', TemplateView.as_view(template_name="Estoque.html"))
+    path ('estoque/', EstoqueView.as_view())
 
     
 ]

@@ -5,13 +5,14 @@ from django.views.generic import CreateView
 from django.urls import reverse_lazy
 
 
-class Hospedes(CreateView):
+class HospedesView (CreateView):
     template_name = "Hóspedes.html"
     model = People
+    fields = ["nome", "Data_De_Nascimento", "cpf", "numero_telefone", "cidade", "cep", "Numero_da_Casa", 'Contato_De_Emergência', 'Observações']
+    success_url= '/menu/'
     
-    fields = ["nome", "nasc", "cpf", "numero_telefone", "cidade", "cep", "n_casa"]
-
-class EstoqueCreateView (CreateView):
+class EstoqueView (CreateView):
     template_name = "Estoque.html"
     model = Estoque
-    #form_class = EstoqueForm
+    fields = ['codigo', 'produto', 'quantidade']
+    success_url= '/menu/'   

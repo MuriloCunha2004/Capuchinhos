@@ -14,11 +14,9 @@ class HospedeForm(ModelForm):
 class EstoqueForm(ModelForm):
     class meta:
         model = Estoque
-        fields = ['produto' , 'quantidade']
-        exclude = ['codigo']
+        fields = ['codigo', 'produto' , 'quantidade']
+
         
-
-
 class ContactForm(forms.Form):
     subject =forms.CharField(max_length=100)
     message = forms.CharField(widget=forms.Textarea)
