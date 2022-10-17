@@ -12,7 +12,7 @@ class HospedesView (CreateView):
     template_name = "Hóspedes.html"
     model = People
     fields = ["nome", "Data_De_Nascimento", "cpf", "numero_telefone", "cidade", "cep", "Numero_da_Casa", 'Contato_De_Emergência', 'Observações']
-    success_url= '/menu/'
+    success_url= '/ver_hospedes/'
     
 
 class HospedesListView (ListView):
@@ -23,14 +23,20 @@ class HospedeDeleteView(DeleteView):
     model = People
     success_url = '/ver_hospedes/'
     
+    
+    
 class EstoqueView (CreateView):
     template_name = "Estoque.html"
     model = Estoque
     fields = ['codigo', 'produto', 'quantidade']
-    success_url= '/menu/'   
+    success_url= '/ver_estoque/'   
     
     
 class EstoqueListView (ListView):
     template_name = "VerEstoque.html"
     model = Estoque
+    
+class EstoqueDeleteView(DeleteView):
+    model = Estoque
+    success_url = '/ver_estoque/'
     

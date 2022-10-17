@@ -22,6 +22,7 @@ from django.views.generic import TemplateView
 from nomedaapp.views import HospedesView, EstoqueView, EstoqueListView
 from nomedaapp.views import HospedesListView
 from nomedaapp.views import HospedeDeleteView
+from nomedaapp.views import EstoqueDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +33,8 @@ urlpatterns = [
     path ('hospedes/',HospedesView.as_view(),),
     path ('ver_hospedes/',HospedesListView.as_view()),
     path ('estoque/', EstoqueView.as_view()),
-    path ('ver_hospedes/delete/<int:id>',HospedeDeleteView.as_view()),
+    path ('ver_hospedes/delete/<int:pk>',HospedeDeleteView.as_view()),
+    path ('ver_estoque/delete/<int:pk>',EstoqueDeleteView.as_view()),
     path ('ver_estoque/',EstoqueListView.as_view()),
+    path ('galeria/',TemplateView.as_view(template_name='Galeria.html')),
 ]

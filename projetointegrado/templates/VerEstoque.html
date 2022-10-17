@@ -6,23 +6,28 @@
     
         
         {% for item in object_list %}
-        
+
         <ol>    
-        <li>{{item.codigo }}</li>
-        <li>{{ item.produto }}</li>
-        <li>{{ item.quantidade }}</li>
-      
+        <b><li></b><b>Código: </b>{{item.codigo }}</li>
+        <li><b>Produto: </b>{{ item.produto }}</li>
+        <li><b>Quantidade: </b>{{ item.quantidade }}</li>
         </ol>
-        <form action='ver_estoque/delete/{{item.id}}' method = "post">
+
+        
+        <form action='/ver_estoque/delete/{{item.pk}}' method = "post">
+                {% csrf_token %}
                 <button type = "submit">Delete</button>
         </form>
-
-
         <hr color="black">
         {% endfor %}
 
         <div class="text-right">
                 <a href="/estoque/" class="btn btn-outline-primary">Voltar</a>
         </div>
+
+        
    
 {% endblock content %} 
+{%block init%}
+
+{%endblock init%}

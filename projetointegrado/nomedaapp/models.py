@@ -24,6 +24,8 @@ class Estoque(models.Model):
     codigo=models.IntegerField(null=True, blank=True)
     produto = models.CharField(max_length = 50)
     quantidade= models.IntegerField(null=True, blank=True)
+    def __str__(self):
+        return self.nome
     
     
 class funcionários(models.Model):
