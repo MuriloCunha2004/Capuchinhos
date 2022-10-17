@@ -8,15 +8,15 @@
         {% for item in object_list %}
         
         <ol>    
-        <li>{{item.nome }}</li>
-        <li>{{ item.cpf }}</li>
-        <li>{{ item.Data_De_Nascimento }}</li>
-        <li>{{ item.numero_telefone }}</li>
-        <li>{{ item.cidade }}</li>
-        <li>{{ item.cep }}</li>
-        <li>{{ item.Numero_da_Casa }}</li>
-        <li>{{ item.Contato_De_Emergência }}</li>
-        <li>{{ item.Observações }}</li>
+        <b><li></b><b>Nome: </b>{{item.nome }}</li>
+        <li><b>CPF: </b>{{ item.cpf }}</li>
+        <li><b>Nascimento:</b> {{ item.Data_De_Nascimento }}</li>
+        <li><b>Telefone:</b> {{ item.numero_telefone }}</li>
+        <li><b>Cidade: </b>{{ item.cidade }}</li>
+        <li><b>Cep: </b>{{ item.cep }}</li>
+        <li><b>Casa: </b>{{ item.Numero_da_Casa }}</li>
+        <li><b>Contato Emergência:</b> {{ item.Contato_De_Emergência }}</li>
+        <li><b>OBS: </b>{{ item.Observações }}</li>
         </ol>
         <form action='ver_hospedes/delete/{{item.id}}' method = "post">
                 <button type = "submit">Delete</button>
