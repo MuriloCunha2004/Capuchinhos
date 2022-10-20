@@ -6,6 +6,8 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView
 from django.views.generic.edit import DeleteView
 
+from nomedaapp.models import galeria
+
 
 
 class HospedesView (CreateView):
@@ -23,8 +25,6 @@ class HospedeDeleteView(DeleteView):
     model = People
     success_url = '/ver_hospedes/'
     
-    
-    
 class EstoqueView (CreateView):
     template_name = "Estoque.html"
     model = Estoque
@@ -39,4 +39,14 @@ class EstoqueListView (ListView):
 class EstoqueDeleteView(DeleteView):
     model = Estoque
     success_url = '/ver_estoque/'
+    
+class GaleriaView(CreateView):
+    template_name= "Galeria.html"
+    model = galeria
+    fields = ['descrição', 'img']
+    success_url= '/menu/'
+    
+class GaleriaListView(ListView):
+    template_name= 'Galeria.html'
+    model=galeria
     

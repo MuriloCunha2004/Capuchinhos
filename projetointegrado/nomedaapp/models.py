@@ -1,7 +1,6 @@
 from unittest.util import _MAX_LENGTH
 from django.db import models
 from django import forms
-
 #def __str__(self):
     #return self.description
     
@@ -40,4 +39,8 @@ class funcionários(models.Model):
     bairro = models.CharField(max_length =225)
     cidade = models.CharField(max_length =225)
     n_casa = models.IntegerField("")
+    
+class galeria (models.Model):
+    descricao=models.CharField(max_length=225)
+    img = models.ImageField()
     

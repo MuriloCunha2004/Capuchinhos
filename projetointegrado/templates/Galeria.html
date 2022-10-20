@@ -3,5 +3,18 @@
 <!DOCTYPE html>
 
 <body>
-    
+
+    {% block content%}
+        {% for item in object_list %}
+            <p>{{item.descricao}}</p>
+            <img src={{item.url}}>
+            <hr>
+        {%endfor%}
+    <div class="text-right">
+        <a href="/menu/" class="btn btn-outline-primary">Voltar</a>
+    </div>
+    {%endblock%}
+    {%block init%}
+
+    {%endblock init%}
 </body>
