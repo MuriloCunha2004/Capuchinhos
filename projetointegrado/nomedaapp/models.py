@@ -1,6 +1,7 @@
 from unittest.util import _MAX_LENGTH
 from django.db import models
 from django import forms
+from projetointegrado import settings
 #def __str__(self):
     #return self.description
     
@@ -42,5 +43,7 @@ class funcionários(models.Model):
     
 class galeria (models.Model):
     descricao=models.CharField(max_length=225)
-    img = models.ImageField()
+    img= models.ImageField(upload_to=settings.MEDIA_ROOT)
+
+
     

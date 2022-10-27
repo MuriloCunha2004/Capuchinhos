@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path , include
 from django.views.generic import TemplateView
 
+
 from nomedaapp.views import HospedesView, EstoqueView, EstoqueListView
 from nomedaapp.views import HospedesListView
 from nomedaapp.views import HospedeDeleteView
@@ -26,6 +27,9 @@ from nomedaapp.views import EstoqueDeleteView
 from django.contrib.auth.decorators import login_required
 
 from nomedaapp.views import GaleriaListView
+from projetointegrado import settings
+
+from django.contrib.staticfiles.urls import static
 
 
 urlpatterns = [
@@ -41,7 +45,15 @@ urlpatterns = [
     path ('ver_estoque/delete/<int:pk>',EstoqueDeleteView.as_view()),
     path ('ver_estoque/',EstoqueListView.as_view()),
     path ('galeria/',GaleriaListView.as_view()),
+    path('admin/', admin.site.urls),
     
-]
+    
+] 
+
+
+
+
+    
+
 
 #path(login_required(ViewSpaceIndx.as_view(..)),
