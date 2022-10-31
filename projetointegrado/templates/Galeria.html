@@ -6,8 +6,10 @@
    
     {% block content%}
         {% for item in object_list %}
-            <p>{{item.descricao}}</p>
-            <img src={{item.img.url}}>{{item.img}}
+            <b><p>{{item.descricao}}:</p></b>
+            <img class="img_galeria" align="center" src={{item.img.url}} />
+            <br></br>
+            <b><p>{{item.data}}</p></b>
             <hr>
         {%endfor%}
     <div class="text-right">

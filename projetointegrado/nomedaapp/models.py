@@ -43,6 +43,7 @@ class funcionários(models.Model):
     
 class galeria (models.Model):
     descricao=models.CharField(max_length=225)
+    data = models.DateField(null=True, blank=True)
     img= models.ImageField(upload_to=settings.MEDIA_ROOT)
 
 

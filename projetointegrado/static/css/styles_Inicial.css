@@ -1,12 +1,26 @@
 body{
     background-color: rgb(180, 233, 211);
 }
+.sobre{
+    display: inline-block;
+    width: 850px;
+    height: 400px;
+}
+.map{
+    
+    display: inline-block;
+    
+    width: 400px;
+    height: 250px;
+    
+}
 .cabeçalho{
-    color: rgb(255, 255, 255);
+    color: rgb(223, 209, 209);
     font-size: 220%;
     text-align: center;
     text-shadow: 2px 2px 4px #000000;
     font-family: 'Cherry Swash', cursive;
+    font-weight: bold;
 }
 .info{
     text-align:  center;
@@ -20,9 +34,20 @@ h4{
 }
 .contato{
     Font-family: Roboto, sans-serif;
+    font-size: 18px;
 }
 p{
     font-family: Roboto, sans-serif;
     font-size: 15px;
     font-style: bold;
+}
+.texto{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.img_galeria{
+    width: 350px;
+    height: 350px;
+      
 }
