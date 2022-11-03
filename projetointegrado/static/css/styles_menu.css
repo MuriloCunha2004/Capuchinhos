@@ -1,16 +1,25 @@
-.titulo {
-  text-decoration: none!important;
-  background-color: red
+body{
+  background-image: url('https://scontent.fpoa5-1.fna.fbcdn.net/v/t39.30808-6/272666291_1352385455206325_2384844791517398328_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=XTh03BBqrXIAX-7doHO&_nc_ht=scontent.fpoa5-1.fna&oh=00_AfC_tEGz5KLHsWxFD5J46VJDeAVk5QhjKjo2G3-ro0nABQ&oe=63697E66');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
 }
+
 nav {
     margin: 27px auto 0;
     top: 200px;
     position: relative;
     width: 760px;
     height: 50px;
-    background-color: #4d995e;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
     border-radius: 8px;
     font-size: 0;
+    font-weight: 700;
   }
   
   nav a {
@@ -61,32 +70,28 @@ nav {
   nav .start-home, a:nth-child(1):hover~.animation {
     width: 150px;
     left: 0;
-    background-color: #1abc9c;
+    background-color: #94dbcd;
   }
   nav .start-about, a:nth-child(2):hover~.animation {
     width: 150px;
     left: 150px;
-    background-color: #e74c3c;
+    background-color: #eb9e95;
   }
   nav .start-blog, a:nth-child(3):hover~.animation {
     width: 150px;
     left: 300px;
-    background-color: #3498db;
+    background-color: #a0d4f7;
   }
   nav .start-portefolio, a:nth-child(4):hover~.animation {
     width: 160px;
     left: 450px;
-    background-color: #9b59b6;
+    background-color: #dcb2ec;
   }
   nav .start-contact, a:nth-child(5):hover~.animation {
     width: 150px;
     left: 600px;
-    background-color: #e67e22;
+    background-color: #e4bc9a;
   }
   
-  body {
-    font-size: 12px;
-    font-family: Roboto, sans-serif;
-    background: rgb(180, 233, 211);
-  }
+
   

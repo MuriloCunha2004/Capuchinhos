@@ -1,15 +1,26 @@
 body{
-    background-color: rgb(180, 233, 211);
+    background-image: url('https://scontent.fpoa5-1.fna.fbcdn.net/v/t39.30808-6/272666291_1352385455206325_2384844791517398328_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=XTh03BBqrXIAX-7doHO&_nc_ht=scontent.fpoa5-1.fna&oh=00_AfC_tEGz5KLHsWxFD5J46VJDeAVk5QhjKjo2G3-ro0nABQ&oe=63697E66');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;   
+}
+.fundo{
+    color: white;
 }
 .sobre{
     display: inline-block;
     width: 850px;
-    height: 400px;
+    height: 350px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+    font-weight: bold;
 }
 .map{
-    
     display: inline-block;
-    
     width: 400px;
     height: 250px;
     
@@ -35,6 +46,10 @@ h4{
 .contato{
     Font-family: Roboto, sans-serif;
     font-size: 18px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
 }
 p{
     font-family: Roboto, sans-serif;
@@ -45,9 +60,18 @@ p{
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     font-weight: 500;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
 }
 .img_galeria{
     width: 350px;
-    height: 350px;
-      
+    height: 350px;   
+}
+.login{
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
 }
